@@ -30,3 +30,4 @@ print(combinationSum(candidates, target))
 # things learnt:
 # 1) function calling order in backtracking
 # 2) difference between result.append(list(combo)) & result.append(combo)
+# 3) combo.pop() pops out the last added element
