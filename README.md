@@ -1,1 +1,3 @@
 Learning to solve leetcode problems with ChatGPT...
+
+Each filename is the leetcode problem number; the link at the bottom of each file is the chat history 
