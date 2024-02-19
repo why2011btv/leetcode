@@ -27,3 +27,6 @@ target = 7
 print(combinationSum(candidates, target))
 
 # https://chat.openai.com/share/5fecaf38-26b3-477c-b09b-94bb078b56f7
+# things learnt:
+# 1) function calling order in backtracking
+# 2) difference between result.append(list(combo)) & result.append(combo)
