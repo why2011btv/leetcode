@@ -46,12 +46,20 @@ class Solution:
 
 # https://chat.openai.com/share/fa954947-621d-45bc-bb29-4aa997d67ab2
 
-# [["A","B","C","E"],
+# [["A","B","C","C"],
 #  ["X","F","C","S"],
 #  ["A","D","E","E"]]
 
 # "ABCCED"
 
 # Exploration order:
-# A -> left of A -> right of A (B) -> left of B -> right of B (C) -> left of C -> right of C -> above C -> below C (C) -> left of C (F) -> right of C (S) -> above C (C) -> below C (E) -> 
-# left of E (D) -> left of D (A), word_index == len(word), return True
+# A -> left of A (OB) -> right of A (B) -> left of B (visited) -> right of B (C) -> left of C (visited) -> right of C (C) -> left of C (visited) -> right of C (OB) -> above C (OB) 
+#       -> below C (S), now visited[0][3] == False, backtrack 
+#       -> above C (OB) -> below C (C) -> left of C (F) -> right of C (S) -> above C (C) -> below C (E) 
+#       -> left of E (D) -> left of D (A), word_index == len(word), return True
+
+# Things learnt:
+# 1) backtracking
+# 2) write the full picture first (like word_search in this case)
+# 3) use another data structure to keep track of the status (like visited in this case)
+# 4) learn how to write is_safe()
