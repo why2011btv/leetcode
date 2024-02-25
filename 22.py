@@ -16,3 +16,5 @@ class Solution:
         output = []
         backtrack('(', 1, 0, n)
         return output
+
+# Looked at 39.py and wrote this solution...
